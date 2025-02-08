@@ -1,0 +1,9 @@
+Important drone directional information:
+The horizontal axises are Y and X, vertical axis is Z. When rotating drone, right or clockwise means positive.
+aw.fly_to([x, y, z]) function uses NED coordinate system in world coordinates, positive X axis is North/forward, positive Y axis is East/right, positive Z axis is Down.
+In terms of drone's body frame axis conventions: forward means positive X axis, right means positive Y axis, up means positive Z axis.
+When asked to move in drones body frame, you should transform drone body frame movements to world coordinates. Because aw.fly_to([x, y, z]) function flies the drone in world coordinates.
+Below is the coordinates transforming equation: x, y, z are the world coordinate movements, x', y', z' are the drone body frame coordinate movements. Please note that we are employing a negative value for "theta".
+x = x'*cos(-theta) + y'*sin(-theta)
+y = -x'*sin(-theta) + y'*cos(-theta)
+z = -z'
