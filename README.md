@@ -1,2 +1,2 @@
 # ICUAS2025
-Detailed prompt framework implementation
+Detailed GSCE prompt framework implementation
