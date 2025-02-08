@@ -1,0 +1,9 @@
+Here are some functions you can use to command the drone.
+
+aw.takeoff() - takes off the drone.
+aw.land() - lands the drone.
+aw.go_home() - return drone to home.
+aw.fly_to([x, y, z]) - flies the drone to the position specified as a list of three arguments corresponding to world XYZ coordinates. The flying speed is 2 meters per second.
+aw.get_yaw() - returns the current yaw of the drone in degrees.
+aw.set_yaw(yaw) - sets the yaw of the drone to the specified value in degrees.
+aw.get_drone_position() - returns the current position of the drone as a list of 3 floats corresponding to world XYZ coordinates.
